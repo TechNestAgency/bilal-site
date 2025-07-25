@@ -85,11 +85,19 @@
 
 
 <div data-bs-spy="scroll" class="scrollspy-example">
-    <div class="d-flex align-items-center justify-content-center">
-        <img src="{{asset('logo.png')}}" style="width: 15%">
-    </div>
-    <div class="d-flex align-items-center justify-content-center">
-        <h3>طلبات التسجيل</h3>
+    <!-- Header with logo and user info -->
+    <div class="d-flex align-items-center justify-content-between p-3 bg-light">
+        <div class="d-flex align-items-center">
+            <img src="{{asset('logo.png')}}" style="width: 10%; margin-right: 20px;">
+            <h3 class="mb-0">طلبات التسجيل</h3>
+        </div>
+        <div class="d-flex align-items-center">
+            <span class="me-3">مرحباً، {{ Auth::user()->name }}</span>
+            <form method="POST" action="{{ route('logout') }}" class="d-inline">
+                @csrf
+                <button type="submit" class="btn btn-outline-danger btn-sm">تسجيل الخروج</button>
+            </form>
+        </div>
     </div>
     <div class="d-flex align-items-center justify-content-center container">
         <table id="enrolls-table">
