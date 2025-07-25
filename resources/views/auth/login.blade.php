@@ -81,12 +81,6 @@
                             </div>
                         </form>
 
-                        <p class="text-center">
-                            <span>New on our platform?</span>
-                            <a href="/">
-                                <span>Create an account</span>
-                            </a>
-                        </p>
 
                         <div class="divider my-4">
                             <div class="divider-text">or</div>
